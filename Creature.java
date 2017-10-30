@@ -38,6 +38,10 @@ public class Creature {
     }
     public String checkStatus(){
         String status = "";
+        if(fullness == 0 || energy == 0 || happiness == 0){
+            System.out.println("Oh no! "+this.getName()+" has died.");
+            System.exit(0);
+        }
         if(happiness<=6){
             status+="Oh, " + this.getName() + "is feeling sad\n";
         }
